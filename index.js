@@ -21,6 +21,10 @@ http
         fileName = "./contact.html";
         break;
 
+      case "/product":
+        fileName = "./product.html";
+        break;
+
       default:
         fileName = "./404.html";
         break;

@@ -20,33 +20,48 @@
       }
       a {
         text-decoration: none !important;
-        color: black;
+        color: white;
+        font-size: larger;
+        font-weight: 600;
       }
 
       a:hover,
       a:focus {
         color: red !important;
       }
+      body nav {
+        background-color: cadetblue !important;
+        /* color: aliceblue !important; */
+      }
+      body {
+        background-color: rgb(208, 219, 219) !important;
+        /* color: aliceblue !important; */
+      }
     </style>
   </head>
   <body>
     <div class="">
-      <nav class="navbar navbar-light bg-light">
+      <nav class="navbar">
         <div class="container-fluid">
           <div class="col-6">
-            <a class="navbar-brand" href="#"> Node-JS / contact page </a>
+            <a class="navbar-brand text-white" href="#">
+              Node.JS / Contact page</a
+            >
           </div>
           <div class="col-6 d-flex justify-content-end pe-5">
             <div class="">
               <ul class="d-flex mb-0 ps-0">
                 <li>
-                  <a href="/">index</a>
+                  <a href="/">Home</a>
                 </li>
                 <li>
-                  <a href="/about">about</a>
+                  <a href="/about">About</a>
                 </li>
                 <li>
-                  <a href="/contact">contact</a>
+                  <a href="/contact">Contact</a>
+                </li>
+                <li>
+                  <a href="/product">Product</a>
                 </li>
               </ul>
             </div>
@@ -54,6 +69,54 @@
         </div>
       </nav>
     </div>
+    <section>
+      <div class="container pt-5">
+        <h1 class="pb-4">Contact®</h1>
+        <p>
+          As an asynchronous event-driven JavaScript runtime, Node.js is
+          designed to build scalable network applications. In the following
+          "hello world" example, many connections can be handled concurrently.
+          Upon each connection, the callback is fired, but if there is no work
+          to be done, Node.js will sleep.
+        </p>
+        <p>
+          This is in contrast to today's more common concurrency model, in which
+          OS threads are employed. Thread-based networking is relatively
+          inefficient and very difficult to use. Furthermore, users of Node.js
+          are free from worries of dead-locking the process, since there are no
+          locks. Almost no function in Node.js directly performs I/O, so the
+          process never blocks except when the I/O is performed using
+          synchronous methods of Node.js standard library. Because nothing
+          blocks, scalable systems are very reasonable to develop in Node.js.
+        </p>
+        <p>
+          Node.js is similar in design to, and influenced by, systems like
+          Ruby's Event Machine and Python's Twisted. Node.js takes the event
+          model a bit further. It presents an event loop as a runtime construct
+          instead of as a library. In other systems, there is always a blocking
+          call to start the event-loop. Typically, behavior is defined through
+          callbacks at the beginning of a script, and at the end a server is
+          started through a blocking call like EventMachine::run(). In Node.js,
+          there is no such start-the-event-loop call. Node.js simply enters the
+          event loop after executing the input script. Node.js exits the event
+          loop when there are no more callbacks to perform. This behavior is
+          like browser JavaScript — the event loop is hidden from the user.
+        </p>
+        <p>
+          HTTP is a first-class citizen in Node.js, designed with streaming and
+          low latency in mind. This makes Node.js well suited for the foundation
+          of a web library or framework.
+        </p>
+        <p>
+          Node.js being designed without threads doesn't mean you can't take
+          advantage of multiple cores in your environment. Child processes can
+          be spawned by using our child_process.fork() API, and are designed to
+          be easy to communicate with. Built upon that same interface is the
+          cluster module, which allows you to share sockets between processes to
+          enable load balancing over your cores.
+        </p>
+      </div>
+    </section>
   </body>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
